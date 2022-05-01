@@ -113,10 +113,12 @@ tasks:
     dest: ./resources/[inventory]
     
   ## ox_lib
-  - action: download_github
-    src: https://github.com/overextended/ox_lib
-    ref: master
-    dest: ./resources/[inventory]/ox_lib
+  - action: download_file
+    src: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
+    path: ./tmp/ox_lib.zip
+  - action: unzip
+    src: ./tmp/ox_lib.zip
+    dest: ./resources/[inventory]
 
   ## npwd
   - action: download_file
