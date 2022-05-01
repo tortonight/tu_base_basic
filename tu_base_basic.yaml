@@ -1,10 +1,10 @@
 $engine: 3
 $minFxVersion: 5104
-$onesync: legacy
-name: OxBasic
-version: 1.1.0
+$onesync: on
+name: tu base basic
+version: 1.0.0
 author: DokaDoka
-description: Basic Overextended template.
+description: Basic TUNIT template.
 
 tasks:
   ## Download default CFX resources
@@ -47,16 +47,22 @@ tasks:
 
   ## Download bulk esx scripts
   - action: download_github
-    src: https://github.com/overextended/esx-legacy
-    ref: main
-    subpath: "[esx_addons]"
-    dest: ./resources/[esx]
-
-  ## Download oxtended
+    src: https://github.com/Bob74/bob74_ipl
+    ref: master
+    dest: ./resources/[base]/bob74_ipl
+  
   - action: download_github
-    src: https://github.com/overextended/es_extended
+    src: https://github.com/esx-framework/esx-legacy
     ref: main
-    dest: ./resources/[esx]/es_extended
+    dest: ./tmp/esx
+    
+  - action: move_path
+    src: ./tmp/esx/[esx]
+    dest: ./resources/[base]
+
+  - action: move_path
+    src: ./tmp/esx/[esx_addons]
+    dest: ./resources/[esx]
 
   ## esx_multicharacter
   - action: download_github
@@ -93,7 +99,7 @@ tasks:
 
   ## oxmysql
   - action: download_file
-    url: https://github.com/overextended/oxmysql/releases/download/v1.9.3/oxmysql-v1.9.3.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v2.3.0/oxmysql.zip
     path: ./tmp/oxmysql.zip
   - action: unzip
     src: ./tmp/oxmysql.zip
