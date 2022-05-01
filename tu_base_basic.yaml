@@ -25,25 +25,25 @@ tasks:
 
   ## Download and prepare server.cfg, database and icon
   - action: download_github
-    src: https://github.com/overextended/ox_basic
+    src: https://github.com/tortonight/tu_base_basic
     ref: main
-    dest: ./tmp/ox_basic
+    dest: ./tmp/tu_base_basic
 
   - action: move_path
-    src: ./tmp/ox_basic/server.cfg
+    src: ./tmp/tu_base_basic/server.cfg
     dest: ./server.cfg
 
   - action: move_path
-    src: ./tmp/ox_basic/oxpog.png
-    dest: ./oxpog.png
+    src: ./tmp/tu_base_basic/myLogo.png
+    dest: ./myLogo.png
 
   - action: replace_string
     mode: all_vars
-    file: ./tmp/ox_basic/ox_basic.sql
+    file: ./tmp/tu_base_basic/tu_base_basic.sql
 
   - action: connect_database
   - action: query_database
-    file: ./tmp/ox_basic/ox_basic.sql
+    file: ./tmp/tu_base_basic/tu_base_basic.sql
 
   ## Download bulk esx scripts
   - action: download_github
