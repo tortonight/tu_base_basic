@@ -185,7 +185,7 @@ tasks:
     mode: all_vars
     file:
     - ./resources/[local]/pe-basicloading/web/config.js
-    - ./resources/[esx]/esx_multicharacter/server/main.lua
+    - ./resources/[base]/esx_multicharacter/server/main.lua
 
   ## Cleanup
   - action: remove_path
