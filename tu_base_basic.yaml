@@ -149,7 +149,7 @@ tasks:
   - action: download_github
     src: https://github.com/AvarianKnight/pma-voice
     ref: main
-    dest: ./resources/[local]pma-voice
+    dest: ./resources/[local]/pma-voice
 
   ## screenshot-basic
   - action: download_github
@@ -160,19 +160,19 @@ tasks:
   ## esx_menu_default
   - action: download_github
     src: https://github.com/nightowlsrp/esx_menu_default
-    ref: master
+    ref: main
     dest: ./resources/[menu]/esx_menu_default
     
   ## esx_menu_dialog
   - action: download_github
     src: https://github.com/nightowlsrp/esx_menu_dialog
-    ref: master
+    ref: main
     dest: ./resources/[menu]/esx_menu_dialog
 
   ## esx_menu_list
   - action: download_github
     src: https://github.com/nightowlsrp/esx_menu_list
-    ref: master
+    ref: main
     dest: ./resources/[menu]/esx_menu_list    
     
   ## loadingscreen
