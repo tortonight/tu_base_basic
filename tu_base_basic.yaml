@@ -217,4 +217,4 @@ tasks:
   - action: remove_path
     path: ./resources/[base]/esx_menu_dialog 
   - action: remove_path
-    path: ./resources/[base]/esx_menu_dialog
+    path: ./resources/[base]/esx_menu_list
