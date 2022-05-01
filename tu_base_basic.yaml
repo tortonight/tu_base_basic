@@ -64,10 +64,18 @@ tasks:
     dest: ./resources/[esx_addons]
 
   ## esx_multicharacter
+  - action: remove_path
+    path: ./resources/[esx_addons]/esx_multicharacter
+
   - action: download_github
     src: https://github.com/thelindat/esx_multicharacter
     ref: master
     dest: ./resources/[base]/esx_multicharacter
+
+  - action: replace_string
+    file: ./resources/[base]/es_extended/config.lua
+    search: 'Config.Multichar                = false'
+    replace: 'Config.Multichar                = true'
 
   - action: replace_string
     file: ./resources/[base]/esx_multicharacter/server/main.lua
