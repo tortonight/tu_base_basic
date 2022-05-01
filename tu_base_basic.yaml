@@ -193,6 +193,10 @@ tasks:
   - action: remove_path
     path: ./tmp
   - action: remove_path
+    path: ./resources/[esx_addons]/esx_addoninve
+  - action: remove_path
+    path: ./resources/[esx_addons]/esx_property
+  - action: remove_path
     path: ./resources/[esx_addons]/esx_accessories
   - action: remove_path
     path: ./resources/[esx_addons]/esx_animations
