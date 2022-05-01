@@ -58,11 +58,11 @@ tasks:
     
   - action: move_path
     src: ./tmp/esx/[esx]
-    dest: ./resources/[base]
+    dest: ./resources/[esx]
 
   - action: move_path
     src: ./tmp/esx/[esx_addons]
-    dest: ./resources/[esx]
+    dest: ./resources/[esx_addons]
 
   ## esx_multicharacter
   - action: download_github
