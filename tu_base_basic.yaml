@@ -3,7 +3,7 @@ $minFxVersion: 5104
 $onesync: on
 name: tu base basic
 version: 1.0.0
-author: DokaDoka
+author: TORTONIGHT
 description: Basic TUNIT template.
 
 tasks:
@@ -47,11 +47,6 @@ tasks:
 
   ## Download bulk esx scripts
   - action: download_github
-    src: https://github.com/Bob74/bob74_ipl
-    ref: master
-    dest: ./resources/[base]/bob74_ipl
-  
-  - action: download_github
     src: https://github.com/esx-framework/esx-legacy
     ref: main
     subpath: "[esx]"
@@ -88,11 +83,19 @@ tasks:
     ref: main
     dest: ./resources/[base]/fivem-appearance
 
+  ## bob74_ipl
+ - action: download_github
+    src: https://github.com/Bob74/bob74_ipl
+    ref: master
+    dest: ./resources/[base]/bob74_ipl
+
+  ## zf_context
   - action: download_github
     src: https://github.com/zf-development/zf_context
     ref: main
     dest: ./resources/[base]/zf_context
 
+  ## zf_dialog
   - action: download_github
     src: https://github.com/zf-development/zf_dialog
     ref: main
